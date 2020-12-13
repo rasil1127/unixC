@@ -1,0 +1,133 @@
+[03/12/2020]-[21:58:01.66] - SYSTEM RAN TPING STRING (ERROR)
+[03/12/2020]-[21:58:05.69] - SYSTEM RAN GETMEM STRING
+[03/12/2020]-[22:17:26.00] - SYSTEM RAN TPING STRING (ERROR)
+[03/12/2020]-[22:20:10.90] - SYSTEM RAN TPING STRING
+[03/12/2020]-[22:25:36.72] - SYSTEM RAN TPING STRING
+[03/12/2020]-[22:28:06.01] - SYSTEM RAN TPING STRING (ERROR)
+[03/12/2020]-[22:32:02.58] - SYSTEM RAN TPING STRING
+[03/12/2020]-[22:34:59.45] - SYSTEM RAN TPING STRING
+[03/12/2020]-[22:35:32.91] - SYSTEM RAN TPING STRING
+[03/12/2020]-[22:37:15.58] - SYSTEM RAN TPING STRING (ERROR)
+[03/12/2020]-[22:41:48.55] - SYSTEM RAN TPING STRING
+[03/12/2020]-[22:51:36.43] - SYSTEM RAN TPING STRING (ERROR)
+[03/12/2020]-[22:52:24.18] - SYSTEM RAN TPING STRING (ERROR)
+[03/12/2020]-[22:52:54.89] - SYSTEM RAN TPING STRING (ERROR)
+[03/12/2020]-[22:57:43.01] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[18:41:57.45] - SYSTEM RAN TPING STRING
+[04/12/2020]-[18:46:02.21] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[18:46:58.82] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[18:51:56.41] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[19:26:49.78]-[RESET] - SYSTEM RAN TESET STRING
+[04/12/2020]-[19:28:05.35]-[ERROR] - No IMB.zip file was found.Error var=errornoimbfilepkg
+[04/12/2020]-[19:32:13.55] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[19:32:25.37] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[19:32:45.01]-[ERROR] - No connection to target mechine localhost connected.Error var=unknownerror
+[04/12/2020]-[19:32:58.21]-[ERROR] - No connection to target mechine after 4 tries.Error var=couldnotconnect
+[04/12/2020]-[19:33:04.97]-[ERROR] - Localhost batch file error (0.0.0.0.0).Error var=errorsameps
+[04/12/2020]-[19:33:19.71] - SYSTEM RAN GETMEM STRING
+[04/12/2020]-[19:33:42.20] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[19:33:49.75] - SYSTEM RAN GETMEM STRING
+[04/12/2020]-[19:37:11.32] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[19:37:16.73]-[ERROR] - Localhost batch file error (0.0.0.0.0).Error var=errorsameps
+[04/12/2020]-[19:37:23.77] - SYSTEM RAN GETMEM STRING
+[04/12/2020]-[19:37:39.52] - SYSTEM RAN GETMEM STRING
+[04/12/2020]-[19:39:38.58] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[19:39:43.62]-[ERROR] - No connection to target mechine localhost connected.Error var=unknownerror
+[04/12/2020]-[19:39:58.27]-[ERROR] - No connection to target mechine localhost connected.Error var=unknownerror
+[04/12/2020]-[19:40:16.26] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[19:42:02.64] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[19:42:07.04]-[ERROR] - No connection to target mechine localhost connected.Error var=unknownerror
+[04/12/2020]-[19:42:28.69] - SYSTEM RAN GETMEM STRING
+[04/12/2020]-[19:45:48.21] - SYSTEM RAN TPING STRING
+[04/12/2020]-[19:49:35.69]-[ERROR] - No connection to target mechine after 4 tries.Error var=couldnotconnect
+[04/12/2020]-[20:01:07.38]-[RESET] - SYSTEM RAN TESET STRING
+[04/12/2020]-[20:01:31.67]-[RESET] - SYSTEM RAN TESET STRING
+[04/12/2020]-[22:33:21.31] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[22:33:52.18]-[ERROR] - Localhost batch file error (0.0.0.0.0).Error var=errorsameps
+[04/12/2020]-[22:34:06.40] - SYSTEM RAN GETMEM STRING
+[04/12/2020]-[22:34:17.65]-[ERROR] - No connection to target mechine after 4 tries.Error var=couldnotconnect
+[04/12/2020]-[22:34:25.26]-[ERROR] - No connection to target mechine after 4 tries.Error var=couldnotconnect
+[04/12/2020]-[22:34:31.29] - SYSTEM RAN GETMEM STRING
+[04/12/2020]-[22:34:43.66]-[ERROR] - No connection to target mechine after 4 tries.Error var=couldnotconnect
+[04/12/2020]-[22:34:56.88] - SYSTEM RAN TPING STRING
+[04/12/2020]-[22:35:04.64]-[ERROR] - No connection to target mechine after 4 tries.Error var=couldnotconnect
+[04/12/2020]-[22:35:12.02]-[ERROR] - No connection to target mechine after 4 tries.Error var=couldnotconnect
+[04/12/2020]-[22:35:15.21] - SYSTEM RAN GETMEM STRING
+[04/12/2020]-[22:36:55.99]-[ERROR] - No connection to target mechine localhost connected.Error var=unknownerror
+[04/12/2020]-[22:37:05.51]-[ERROR] - No connection to target mechine localhost connected.Error var=unknownerror
+[04/12/2020]-[22:37:21.45]-[ERROR] - No connection to target mechine localhost connected.Error var=unknownerror
+[04/12/2020]-[22:38:55.36]-[ERROR] - No connection to target mechine localhost connected.Error var=unknownerror
+[04/12/2020]-[22:39:02.40] - SYSTEM RAN GETMEM STRING
+[04/12/2020]-[22:39:18.11] - SYSTEM RAN TPING STRING
+[04/12/2020]-[22:39:24.98]-[ERROR] - No connection to target mechine after 4 tries.Error var=couldnotconnect
+[04/12/2020]-[22:39:30.84] - SYSTEM RAN GETMEM STRING
+[04/12/2020]-[22:39:55.05] - SYSTEM RAN IPCNFG-PBC STRING
+[04/12/2020]-[22:40:10.00] - SYSTEM RAN IPCNFG-PBC STRING
+[04/12/2020]-[22:40:23.49]-[ERROR] - No connection to target mechine after 4 tries.Error var=couldnotconnect
+[04/12/2020]-[22:40:33.77] - SYSTEM RAN IPCNFG-PBC STRING
+[04/12/2020]-[22:40:55.03]-[ERROR] - No connection to target mechine localhost connected.Error var=unknownerror
+[04/12/2020]-[22:40:59.82]-[ERROR] - No connection to target mechine localhost connected.Error var=unknownerror
+[04/12/2020]-[22:41:05.50] - SYSTEM RAN OFFUNIX STRING
+[04/12/2020]-[22:44:46.51] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[22:44:49.59] - SYSTEM RAN EXIT STRING
+[04/12/2020]-[22:45:35.03] - SYSTEM RAN TPING STRING
+[04/12/2020]-[22:45:48.21]-[ERROR] - Localhost batch file error (0.0.0.0.0).Error var=errorsameps
+[04/12/2020]-[22:45:59.74] - SYSTEM RAN GETMEM STRING
+[04/12/2020]-[22:46:08.63] - SYSTEM RAN GETMEM STRING
+[04/12/2020]-[22:48:24.86] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[22:51:45.97] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[22:53:50.14] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[22:54:33.66] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[22:54:48.62] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[22:55:22.55] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[23:01:27.04] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[23:01:47.06] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[23:02:12.74] - SYSTEM RAN TPING STRING (ERROR)
+[04/12/2020]-[23:02:19.63] - SYSTEM RAN TPING STRING (ERROR)
+[05/12/2020]-[13:24:26.92]-[ERROR] - Access denied to program files.Error var=error
+[05/12/2020]-[13:25:19.46]-[ERROR] - Access denied to program files.Error var=error
+[05/12/2020]-[13:32:00.98] - SYSTEM RAN TPING STRING (ERROR)
+[05/12/2020]-[13:33:52.19] - SYSTEM RAN TPING STRING (ERROR)
+[05/12/2020]-[13:39:27.41]-[INSTALL] - SYSTEM RAN INSTALL STRING
+[05/12/2020]-[13:58:34.07]-[RESET] - SYSTEM RAN TESET STRING
+[05/12/2020]-[14:26:48.75]-[INSTALL] - SYSTEM RAN INSTALL STRING
+[12/12/2020]-[12:55:15.45] - SYSTEM RAN TPING STRING (ERROR)
+[12/12/2020]-[15:33:15.32]-[INSTALL] - SYSTEM RAN INSTALL STRING
+[12/12/2020]-[16:07:54.39]-[ERROR] - Incomplete ftp infomation /deleted/.Error var=errrofrt
+[12/12/2020]-[18:13:04.69]-[INSTALL] - SYSTEM RAN INSTALL STRING
+[12/12/2020]-[19:11:54.44]-[ERROR] - Incomplete ftp infomation /deleted/.Error var=errrofrt
+[12/12/2020]-[19:13:27.38]-[INSTALL] - SYSTEM RAN INSTALL STRING
+[12/12/2020]-[19:27:26.75]-[FTP] - Custom ftp server was set.info=ftp://kut:------@mane
+[12/12/2020]-[21:14:28.56]-[FTP] - Custom set ftp server was successfully deleted
+[12/12/2020]-[21:15:28.82]-[ERROR] - Access denied to program files.Error var=error
+[12/12/2020]-[21:16:21.81]-[ERROR] - Access denied to program files.Error var=error
+[12/12/2020]-[21:18:18.55]-[ERROR] - No connection to target mechine after 5 tries.Error var=couldnotconnect
+[12/12/2020]-[21:23:45.65]-[FTP] - Custom ftp server was set.info=ftp://edextorymc:------@files.000webhost.com
+[12/12/2020]-[21:25:29.77]-[ERROR] - No connection to target mechine after 5 tries.Error var=couldnotconnect
+[12/12/2020]-[21:43:55.83]-[RESET] - SYSTEM RAN TESET STRING
+[12/12/2020]-[21:45:50.39]-[INSTALL] - SYSTEM RAN INSTALL STRING
+[12/12/2020]-[23:50:21.27]-[ERROR] - No connection to target mechine localhost connected.Error var=unknownerror
+[12/12/2020]-[23:52:30.76] - SYSTEM RAN TPING STRING (ERROR)
+[12/12/2020]-[23:53:31.81] - SYSTEM RAN TPING STRING
+[12/12/2020]-[23:53:41.34]-[ERROR] - No connection to target mechine after 5 tries.Error var=couldnotconnect
+[12/12/2020]-[23:53:46.20]-[ERROR] - Localhost batch file error (0.0.0.0.0).Error var=errorsameps
+[12/12/2020]-[23:54:17.13]-[ERROR] - No connection to target mechine after 5 tries.Error var=couldnotconnect
+[12/12/2020]-[23:54:21.09]-[ERROR] - No connection to target mechine localhost connected.Error var=unknownerror
+[12/12/2020]-[23:54:27.57] - SYSTEM RAN GETMEM STRING
+[12/12/2020]-[23:55:55.71] - SYSTEM RAN IPCNFG-PBC STRING
+[12/12/2020]-[23:56:24.00] - SYSTEM RAN TPING STRING (ERROR)
+[12/12/2020]-[23:56:32.69] - SYSTEM RAN TPING STRING
+[12/12/2020]-[23:56:43.06] - SYSTEM RAN OFFUNIX STRING
+[12/12/2020]-[23:58:23.09]-[INSTALL] - SYSTEM RAN INSTALL STRING
+[13/12/2020]-[13:57:33.62]-[RESET] - SYSTEM RAN TESET STRING
+[13/12/2020]-[13:58:14.56]-[INSTALL] - SYSTEM RAN INSTALL STRING
+[13/12/2020]-[14:03:16.80]-[ERROR]-[FTP] - Could not delete custom-set ftp server.Error var=nodelftp
+[13/12/2020]-[14:04:48.91]-[FTP] - Custom ftp server was set.info=ftp://haap:------@mahi
+[13/12/2020]-[14:08:43.73]-[RESET] - SYSTEM RAN TESET STRING
+[13/12/2020]-[14:08:49.42]-[INSTALL] - SYSTEM RAN INSTALL STRING
+[13/12/2020]-[14:09:33.36]-[FTP] - Custom ftp server was set.info=ftp://mahi:------@oahif
+[13/12/2020]-[14:13:00.86]-[FTP] - Custom set ftp server was successfully deleted
+[13/12/2020]-[14:14:23.31]-[FTP] - Custom ftp server was set.info=ftp://kut:------@mani
+[13/12/2020]-[14:14:46.61]-[FTP] - Custom set ftp server was successfully deleted
+[13/12/2020]-[14:17:44.51]-[FTP] - Custom ftp server was set.info=ftp://gfgf:------@gfgfgfgg
+[13/12/2020]-[14:17:53.20]-[FTP] - Custom set ftp server was successfully deleted
