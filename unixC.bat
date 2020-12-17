@@ -3,6 +3,7 @@
 title unixC
 del dbug.system
 del start.i
+del er.r
 echo .>start.i
 color f0
 if exist upkg.i del upkg.i
@@ -108,7 +109,6 @@ del ReadMe.txt
 start "" "%~f0"
 exit
 :unpackye
-echo [%DATE%]-[%TIME%]-[INSTALL] - SYSTEM RAN INSTALL STRING>>log.txt
 echo deleting...
 del dbug.system
 del delattrib.tmp
@@ -123,8 +123,23 @@ del WinSCP.ini
 @RD /S /Q "send"
 @RD /S /Q "sysfiles"
 cls
+echo Witch WinSCP package would you like to install?
+echo 1)WinSCP 5179
+echo 2)WinSCP 426
+echo 3)WinSCP 434
+echo 4)WinSCP 500
+echo 5)WinSCP 570
+choice /c 12345
+if %errorlevel% ==1 goto winscp1
+if %errorlevel% ==2 goto winscp2
+if %errorlevel% ==3 goto winscp3
+if %errorlevel% ==4 goto winscp4
+if %errorlevel% ==5 goto winscp5
+:winscp1
+cls
+echo [%DATE%]-[%TIME%]-[INSTALL] - SYSTEM RAN INSTALL STRING>>log.txt
 echo !UNPACKING!
-powershell -Command "Invoke-WebRequest https://github.com/rasil1127/Acket/archive/main.zip -OutFile IMB.zip"
+powershell -Command "Invoke-WebRequest https://github.com/rasil1127/Acket/raw/main/IMB.zip -OutFile IMB.zip"
 powershell Expand-Archive IMB.zip
 powershell Expand-Archive IMB\Acket-main\IMB.zip
 del IMB.zip
@@ -136,7 +151,70 @@ for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%
 del ReadMe.txt
 start "" "%~f0"
 exit
-
+:winscp2
+cls
+echo [%DATE%]-[%TIME%]-[INSTALL] - SYSTEM RAN INSTALL STRING>>log.txt
+echo !UNPACKING!
+powershell -Command "Invoke-WebRequest https://github.com/rasil1127/Acket/raw/main/winscp426.zip -OutFile IMB.zip"
+powershell Expand-Archive IMB.zip
+powershell Expand-Archive IMB\Acket-main\IMB.zip
+del IMB.zip
+@RD /S /Q "IMB\Acket-main"
+SET src_folder=IMB
+SET tar_folder=%cd%
+for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%\"
+@RD /S /Q "IMB"
+del ReadMe.txt
+start "" "%~f0"
+exit
+:winscp3
+cls
+echo [%DATE%]-[%TIME%]-[INSTALL] - SYSTEM RAN INSTALL STRING>>log.txt
+echo !UNPACKING!
+powershell -Command "Invoke-WebRequest https://github.com/rasil1127/Acket/raw/main/winscp434.zip -OutFile IMB.zip"
+powershell Expand-Archive IMB.zip
+powershell Expand-Archive IMB\Acket-main\IMB.zip
+del IMB.zip
+@RD /S /Q "IMB\Acket-main"
+SET src_folder=IMB
+SET tar_folder=%cd%
+for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%\"
+@RD /S /Q "IMB"
+del ReadMe.txt
+start "" "%~f0"
+exit
+:winscp4
+cls
+echo [%DATE%]-[%TIME%]-[INSTALL] - SYSTEM RAN INSTALL STRING>>log.txt
+echo !UNPACKING!
+powershell -Command "Invoke-WebRequest https://github.com/rasil1127/Acket/raw/main/winscp500.zip -OutFile IMB.zip"
+powershell Expand-Archive IMB.zip
+powershell Expand-Archive IMB\Acket-main\IMB.zip
+del IMB.zip
+@RD /S /Q "IMB\Acket-main"
+SET src_folder=IMB
+SET tar_folder=%cd%
+for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%\"
+@RD /S /Q "IMB"
+del ReadMe.txt
+start "" "%~f0"
+exit
+:winscp5
+cls
+echo [%DATE%]-[%TIME%]-[INSTALL] - SYSTEM RAN INSTALL STRING>>log.txt
+echo !UNPACKING!
+powershell -Command "Invoke-WebRequest https://github.com/rasil1127/Acket/raw/main/winscp570.zip -OutFile IMB.zip"
+powershell Expand-Archive IMB.zip
+powershell Expand-Archive IMB\Acket-main\IMB.zip
+del IMB.zip
+@RD /S /Q "IMB\Acket-main"
+SET src_folder=IMB
+SET tar_folder=%cd%
+for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%\"
+@RD /S /Q "IMB"
+del ReadMe.txt
+start "" "%~f0"
+exit
 :rund
 del WinSCP.ini
 del delattrib.tmp
@@ -437,6 +515,8 @@ del dbug.system
 del delattrib.tmp
 del ftphst.ftp
 del ftppas.ftp
+del licence
+del readme
 del start.i
 del ftpusr.ftp
 del receiveattrib.tmp
@@ -458,6 +538,8 @@ del receiveattrib.tmp
 del sendattrib.tmp
 del ftphst.ftp
 del ftppas.ftp
+del licence
+del readme
 del ftpusr.ftp
 del upkg.i
 del start.i
@@ -472,28 +554,19 @@ exit
 ::#################RESET##################################
 
 ::#################UPDATEPKG##############################
-:updatepkg
-echo .>upkg.i
-goto dbug
 :updatepkg1
-echo .>dele.1
-goto reset
 :updatepkg2
-del dele.1
+echo .>er.r
 cls
-echo !UNPACKING!
-powershell Expand-Archive IMB.zip
-powershell Expand-Archive IMB\Acket-main\IMB.zip
-del IMB.zip
-del IMB\Acket-main\IMB.zip
-@RD /S /Q "IMB\Acket-main"
-SET src_folder=IMB
-SET tar_folder=%cd%
-for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%\"
-@RD /S /Q "IMB"
-del ReadMe.txt
-start "" "%~f0"
-exit
+Echo Please choose from the options below
+echo.
+echo 1) Custom package
+echo 2) Offline IMB package
+echo 3) Default package
+choice /c 123
+if %errorlevel% ==1 goto custom
+if %errorlevel% ==2 goto unpackno
+if %errorlevel% ==3 goto unpackye
 ::#################UPDATEPKG##############################
 
 ::#################DBUG##############################
@@ -990,6 +1063,7 @@ echo Cannot find %imbfile%
 echo please try again..
 echo press any key to go to menu
 pause>nul
+if exist er.r goto updatepkg2
 goto unpack
 :errorsameps
 echo [%DATE%]-[%TIME%]-[ERROR] - Localhost batch file error (0.0.0.0.0).Error var=errorsameps>>log.txt
@@ -1051,6 +1125,7 @@ echo If you have a custom-named package type
 echo "custom" in the menu for [Y/N]
 echo press any key to go to menu
 pause>nul
+if exist er.r goto updatepkg2
 goto unpack
 :errornodefinevar
 echo [%DATE%]-[%TIME%]-[ERROR] - Reached the end of syntax no further connection.Error var=errornodefinevar>>log.txt
