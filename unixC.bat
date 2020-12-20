@@ -155,94 +155,6 @@
 ÿþ&cls
 ÿþ&cls
 ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
-ÿþ&cls
 @ECHO OFF
 ::#################STARTUP SETTINGS###########################
 title unixC
@@ -251,6 +163,20 @@ del start.i
 del er.r
 echo .>start.i
 color f0
+if exist ver.unuax del ver.unuax
+@RD /S /Q "sys"
+@RD /S /Q "ver"
+if exist sys.zip del sys.zip
+cls
+powershell -Command "Invoke-WebRequest https://github.com/rasil1127/Acket/raw/main/ver.zip -OutFile sys.zip"
+powershell Expand-Archive sys.zip
+del sys.zip
+for /f %%a IN ('dir "sys" /b') do move "sys\%%a" "%cd%\"
+@RD /S /Q "sys"
+for /f %%a IN ('dir "ver" /b') do move "ver\%%a" "%cd%\"
+@RD /S /Q "ver"
+if not exist ver.unuax goto nowifi
+if exist inst.fal goto installfal
 if exist upkg.i del upkg.i
 if exist ipve.i del ipve.i
 if exist ipbc.i del ipbc.i
@@ -292,6 +218,8 @@ goto unpack
 :custom
 cls
 echo Enter Custom-pakage file name below
+echo INFOMATION: identify only the filename and no extensions
+echo INFOMATION: the package MUST be a zip file!
 set /p imbfile="[UNIX]>"
 if not exist %imbfile%.zip goto imbfile
 echo [%DATE%]-[%TIME%]-[INSTALL] - SYSTEM RAN INSTALL STRING>>log.txt
@@ -305,6 +233,9 @@ del upkg.i
 del WinSCP.com
 del WinSCP.exe
 del WinSCP.ini
+del upd.pkg
+del ver.unuax
+@RD /S /Q "WinSCP"
 @RD /S /Q "receve"
 @RD /S /Q "send"
 @RD /S /Q "sysfiles"
@@ -320,6 +251,8 @@ SET tar_folder=%cd%
 for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%\"
 @RD /S /Q "IMB"
 del ReadMe.txt
+if not exist WinSCP.com echo .>inst.fal
+if not exist WinSCP.exe echo .>inst.fal
 start "" "%~f0"
 exit
 :unpackno
@@ -336,6 +269,9 @@ del WinSCP.com
 del start.i
 del WinSCP.exe
 del WinSCP.ini
+del upd.pkg
+del ver.unuax
+@RD /S /Q "WinSCP"
 @RD /S /Q "receve"
 @RD /S /Q "send"
 @RD /S /Q "sysfiles"
@@ -351,6 +287,8 @@ SET tar_folder=%cd%
 for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%\"
 @RD /S /Q "IMB"
 del ReadMe.txt
+if not exist WinSCP.com echo .>inst.fal
+if not exist WinSCP.exe echo .>inst.fal
 start "" "%~f0"
 exit
 :unpackye
@@ -364,6 +302,9 @@ del WinSCP.com
 del WinSCP.exe
 del start.i
 del WinSCP.ini
+del upd.pkg
+del ver.unuax
+@RD /S /Q "WinSCP"
 @RD /S /Q "receve"
 @RD /S /Q "send"
 @RD /S /Q "sysfiles"
@@ -394,6 +335,8 @@ SET tar_folder=%cd%
 for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%\"
 @RD /S /Q "IMB"
 del ReadMe.txt
+if not exist WinSCP.com echo .>inst.fal
+if not exist WinSCP.exe echo .>inst.fal
 start "" "%~f0"
 exit
 :winscp2
@@ -410,6 +353,8 @@ SET tar_folder=%cd%
 for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%\"
 @RD /S /Q "IMB"
 del ReadMe.txt
+if not exist WinSCP.com echo .>inst.fal
+if not exist WinSCP.exe echo .>inst.fal
 start "" "%~f0"
 exit
 :winscp3
@@ -426,6 +371,8 @@ SET tar_folder=%cd%
 for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%\"
 @RD /S /Q "IMB"
 del ReadMe.txt
+if not exist WinSCP.com echo .>inst.fal
+if not exist WinSCP.exe echo .>inst.fal
 start "" "%~f0"
 exit
 :winscp4
@@ -442,6 +389,8 @@ SET tar_folder=%cd%
 for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%\"
 @RD /S /Q "IMB"
 del ReadMe.txt
+if not exist WinSCP.com echo .>inst.fal
+if not exist WinSCP.exe echo .>inst.fal
 start "" "%~f0"
 exit
 :winscp5
@@ -458,6 +407,8 @@ SET tar_folder=%cd%
 for /f %%a IN ('dir "%src_folder%" /b') do move "%src_folder%\%%a" "%tar_folder%\"
 @RD /S /Q "IMB"
 del ReadMe.txt
+if not exist WinSCP.com echo .>inst.fal
+if not exist WinSCP.exe echo .>inst.fal
 start "" "%~f0"
 exit
 :rund
@@ -475,9 +426,9 @@ if exist sendattrib.tmp goto error
 if exist ftpusr.ftp goto customftp
 if exist ftphst.ftp goto customftp
 if exist ftppas.ftp goto customftp
-set username="unaux_27236823"
-set password="Manxvged1x99g54"
-set host="ftpupload.net"
+set username=unaux_27236823
+set password=Manxvged1x99g54
+set host=ftpupload.net
 echo .>ftp.xtv
 del delattrib.tmp
 del receiveattrib.tmp
@@ -545,11 +496,14 @@ goto unpack
 
 ::#################MAIN MENU##############################
 :n
+if not exist ver.unuax goto nover.ini
+set /p ver=<ver.unuax
 if exist start.i goto infostart
 del /q receve\*
 echo.
 set /p unix="[UNIX]>"
 if /i '%unix%'=='restart' goto restart
+::if /i '%unix%'=='array' goto array
 if /i '%unix%'=='ftpinfo' goto ftpinfo
 if /i '%unix%'=='log' goto logt
 if /i '%unix%'=='0x22' goto 0x22
@@ -597,22 +551,29 @@ echo TPING - Pings the target mechine to tell if its online
 echo IPCNFG-PVE - configureation for ipcnfg defined privite
 echo IPCNFG-PBC - configureation for ipcnfg defined public
 echo IPCNFG - configureation for ipcnfg command
-echo RMWEB - Opens a website on the target mechine
 echo GETMEM - Pings the target mechine to give its mem status
 echo DELFTP - deletes the custom-set ftp protocall
 echo SETFTP - setting used to define a custom ftp server
 echo RMOFF - shutsdown the target coumputer forcefully
 echo RMUNIX - closes the UNIX app on the target mechine
 echo TDIR - examines the target mechine's unix app's path
+::echo ARRAY - Allows the user to execute commands one after another 
 echo RESET - Deletes everything that is related to the program
 echo UPDATEPKG - Update WINSCP package to a newer one or a modified one
 echo TRUN - runs the file specified by the user using the path
 echo SHELL - runs cmd on the target mechine (can specify command)
 goto n
 :commanderror
+if exist cmd.rr goto commanderrorarray
 echo "%unix%" is not a recognized as an internal or external command,
 echo folder path or unix file. Type help to get help
 goto n
+:commanderrorarray
+del cmd.rr
+echo the command you have entered is not a recognized
+echo as an internal or external command, folder path
+echo or unix file. Type help to get help
+goto array
 :cls
 cls 
 goto n
@@ -625,9 +586,19 @@ echo Host [%host%]
 echo Username [%username%]
 goto n
 :infostart
+if /i '%ver%'=='1.0' goto infostartok
+echo Theres a new update avable would you like to install it?
+echo [Y/N]
+set /p infostart="[UNIX]>"
+echo .>upd.pkg
+if /i '%infostart%'=='y' goto updatepkg2
+if /i '%infostart%'=='n' goto infostartok
+goto infostart
+:infostartok
+cls
 if exist  ftpusr.ftp set /p username=<ftpusr.ftp
 if exist ftphst.ftp set /p host=<ftphst.ftp
-echo Acket (unixC) [Ver=1.0]
+echo Acket (unixC) [Ver=%ver%]
 echo Ftp info:
 echo Host [%host%]
 echo Username [%username%]
@@ -658,25 +629,94 @@ echo when unixC made them this error can popup. A log file has been created
 goto n
 ::#################MAIN MENU##############################
 
-::#################RMWEB##############################
-:rmweb
-echo .>rmw.i
-goto dbug
-:rmweb1
-del rmw.i
-echo [%DATE%]-[%TIME%] - SYSTEM RAN IPCNFG-PVE STRING>>log.txt
-echo FILE_NOT_SENT_SUCCESSFULLY>send\ipcnfg-pve.unix
-echo sending signal wait...
-echo.
-"WinSCP.com" /script="sendattrib.tmp"
-echo.
-echo ------------------------------
-echo listening for confirmation...
-echo ------------------------------
-del /q send\*
-::ping localhost -n 4 >nul
-goto ipcnfg-pbcping
-::#################RMWEB##############################
+::#################rmweb___ARRAY##############################
+:::array
+::echo How meny commands would you like to execute?
+::echo Max allowed is "4", RMDB to go back
+::echo.
+::set /p arraynum="[ARRAY]>"
+::if /i '%arraynum%'=='rmdb' goto n
+::if /i '%arraynum%'=='1' goto array1
+::if /i '%arraynum%'=='2' goto array2
+::if /i '%arraynum%'=='3' goto array3
+::if /i '%arraynum%'=='4' goto array4
+::goto arrayinvalid
+:::array2
+::echo Type your commands, RMDB to go back
+::set /p array2="[ARRAY]>"
+::if /i '%unix%'=='restart' goto restartarray
+::if /i '%unix%'=='ftpinfo' set array2-1=ftpinfo
+::if /i '%unix%'=='log' set array2-1=log
+::if /i '%unix%'=='0x22' set array2-1=0x22
+::if /i '%unix%'=='setftp' set array2-1=setftp
+::if /i '%unix%'=='rmweb' set array2-1=rmweb
+::if /i '%unix%'=='0x003' set array2-1=0x003
+::if /i '%unix%'=='reset' goto resetarray
+::if /i '%unix%'=='dbug' set array2-1=dbugmode
+::if /i '%unix%'=='clear' set array2-1=cls
+::if /i '%unix%'=='delftp' goto delftparray
+::if /i '%unix%'=='help' set array2-1=help
+::if /i '%unix%'=='updatepkg' goto updatepkg1array
+::if /i '%unix%'=='exit' goto exitarray
+::if /i '%unix%'=='cls' set array2-1=cls
+::if /i '%unix%'=='getmem' set array2-1=getmem
+::if /i '%unix%'=='rmoff' set array2-1=off
+::if /i '%unix%'=='rmunix' set array2-1=offunix
+::if /i '%unix%'=='tdir' set array2-1=targetdir
+::if /i '%unix%'=='trun' set array2-1=targetrun
+::if /i '%unix%'=='shell' set array2-1=shell
+::if /i '%unix%'=='tping' set array2-1=tping
+::if /i "%unix%"=="ipcnfg" set array2-1=ipcnfgerror
+::if /i "%unix%"== "ipcnfg-pbc" set array2-1=ipcnfg-pbc
+::if /i "%unix%"== "ipcnfg-pve" set array2-1=ipcnfg-pve
+::if /i '%array2%'=='rmdb' goto array
+:::array1
+::echo *******************************************
+::echo Dont use the array function to execute 1 
+::echo command!
+::echo *******************************************
+::echo.
+::goto array
+:::exitarray
+::echo *******************************************
+::echo Exit cannot be used in an array!
+::echo *******************************************
+::echo.
+::goto array
+:::updatepkg1array
+::echo *******************************************
+::echo Updatepkg cannot be used in an array!
+::echo *******************************************
+::echo.
+::goto array
+:::delftparray
+::echo *******************************************
+::echo Delftp cannot be used in an array!
+::echo *******************************************
+::echo.
+::goto array
+:::resetarray
+::echo *******************************************
+::echo Reset cannot be used in an array!
+::echo *******************************************
+::echo.
+::goto array
+:::restartarray
+::echo *******************************************
+::echo Restart cannot be used in an array!
+::echo *******************************************
+::echo.
+::goto array
+:::arrayinvalid
+::echo *******************************************
+::echo More than 4 or an invalid command try again
+::echo *******************************************
+::echo.
+::goto array
+::rmweb
+::echo Dev command not in use...
+::goto n
+::#################rmweb___ARRAY##############################
 
 ::#################SETFTP##############################
 :delftp
@@ -770,6 +810,9 @@ del upkg.i
 del WinSCP.com
 del WinSCP.exe
 del WinSCP.ini
+del upd.pkg
+del ver.unuax
+@RD /S /Q "WinSCP"
 @RD /S /Q "receve"
 @RD /S /Q "send"
 @RD /S /Q "sysfiles"
@@ -791,6 +834,9 @@ del start.i
 del WinSCP.com
 del WinSCP.exe
 del WinSCP.ini
+del upd.pkg
+del ver.unuax
+@RD /S /Q "WinSCP"
 @RD /S /Q "receve"
 @RD /S /Q "send"
 @RD /S /Q "sysfiles"
@@ -1309,7 +1355,19 @@ echo please try again..
 echo press any key to go to menu
 pause>nul
 if exist er.r goto updatepkg2
+if exist upd.pkg goto updatepkg2
 goto unpack
+:installfal
+cls
+del inst.fal
+echo [%DATE%]-[%TIME%]-[ERROR] - Install failure package was currupted.Error var=errorsameps>>log.txt
+echo ************************************
+echo WinSCP package install was currupted
+echo and it needs to be installed again!
+echo press any key to continue...
+echo ************************************
+pause>nul
+goto updatepkg1
 :errorsameps
 echo [%DATE%]-[%TIME%]-[ERROR] - Localhost batch file error (0.0.0.0.0).Error var=errorsameps>>log.txt
 "WinSCP.com" /script="delattrib.tmp"
@@ -1371,6 +1429,7 @@ echo "custom" in the menu for [Y/N]
 echo press any key to go to menu
 pause>nul
 if exist er.r goto updatepkg2
+if exist upd.pkg goto updatepkg2
 goto unpack
 :errornodefinevar
 echo [%DATE%]-[%TIME%]-[ERROR] - Reached the end of syntax no further connection.Error var=errornodefinevar>>log.txt
@@ -1400,6 +1459,25 @@ pause>nul
 del ftpusr.ftp
 del ftphst.ftp
 del ftppas.ftp
+exit
+:nover.ini
+echo [%DATE%]-[%TIME%]-[ERROR] - cannot locate ver.unuax.Error var=nover.ini>>log.txt
+cls
+echo **********************************************************
+echo Startup error cannot locate system files please reinstall!
+echo press any key to exit!
+echo **********************************************************
+pause>nul
+exit
+:nowifi
+echo [%DATE%]-[%TIME%]-[ERROR] - Access denied to program files.Error var=error>>log.txt
+cls
+echo ***************************************************
+echo Could not connect to wifi! please check if 
+echo you have a working wifi connection.
+echo press any key to exit!
+echo ***************************************************
+pause>nul
 exit
 :error
 echo [%DATE%]-[%TIME%]-[ERROR] - Access denied to program files.Error var=error>>log.txt
